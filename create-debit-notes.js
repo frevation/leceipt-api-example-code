@@ -117,4 +117,4 @@ async function CreateDebitNote() {
   return response.data;
 }
 
-console.log(CreateDebitNote());
+CreateDebitNote();

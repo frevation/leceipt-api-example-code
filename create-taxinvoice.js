@@ -25,7 +25,7 @@ let company = {
   taxNumberType: 'TXID',
   taxId: '1234567890123',
   phoneCountryCode: '+66',
-  phone: '812345678',
+  phone: '0812345678',
   email: 'test@test.com',
   unstructure: false,
 };
@@ -40,7 +40,7 @@ let customer = {
   taxNumberType: 'TXID',
   taxId: '1234567890123',
   phoneCountryCode: '+66',
-  phone: '812345678',
+  phone: '0812345678',
   email: 'test@test.com',
   unstructure: true,
 };

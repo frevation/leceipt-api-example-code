@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const URl = 'https://api.leceipt.com';
-const endpoint = '/etax/documents/receipts-taxinvoices?api-version=2021-04-22';
+const endpoint = '/etax/documents/receipts-taxinvoices';
 const API_Key = 'YOUR-API-KEY';
 
 let company = {
@@ -14,7 +14,7 @@ let company = {
   taxNumberType: 'TXID',
   taxId: '1234567890123',
   phoneCountryCode: '+66',
-  phone: '812345678',
+  phone: '0812345678',
   email: 'test@test.com',
   unstructure: true,
 };
@@ -29,7 +29,7 @@ let customer = {
   taxNumberType: 'TXID',
   taxId: '1234567890123',
   phoneCountryCode: '+66',
-  phone: '812345678',
+  phone: '0812345678',
   email: 'test@test.com',
   unstructure: true,
 };
