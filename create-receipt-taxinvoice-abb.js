@@ -19,6 +19,21 @@ let company = {
   unstructure: true,
 };
 
+let customer = {
+  name: null,
+  addressLineOne: null,
+  addressLineTwo: null,
+  postcode: null,
+  branchNumber: null,
+  branchText: null,
+  taxNumberType: null,
+  taxId: null,
+  phoneCountryCode: '+66',
+  phone: null,
+  email: null,
+  unstructure: true,
+};
+
 let items = [
   {
     number: 1,
@@ -47,6 +62,7 @@ let refer = {
 
 let data = {
   company: company, // company จากข้อมูลก่อนหน้า
+  customer: customer, // customer จากข้อมูลก่อนหน้า
   date: '2021-03-23T14:50:21.073Z',
   dateBE: '23/03/2564',
   dateCE: '23/03/2021',
