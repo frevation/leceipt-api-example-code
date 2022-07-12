@@ -32,7 +32,6 @@ let customer = {
   postcode: '10500',
   taxNumberType: 'TXID',
   taxId: '1234567890123',
-  phoneCountryCode: '+66',
   phone: '0812345678',
   email: 'test@test.com',
   unstructure: false,
