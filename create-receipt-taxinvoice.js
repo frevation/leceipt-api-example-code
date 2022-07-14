@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const URl = 'https://api.leceipt.com';
-const endpoint = '/etax/documents/receipts-taxinvoices';
-const API_Key = 'YOUR-API-KEY';
+const endpoint = '/etax/documents/receipts-taxinvoices?api-version=2022-07-12';
+const API_Key = '50bb288614a448ca846edfd11eb7daff';
 
 // unstructure เป็น true
 
@@ -77,6 +77,7 @@ let data = {
   receivedBy: 'สมชาย',
   reIssue: false,
   refer: refer, // refer จากข้อมูลก่อนหน้า
+  reference: '',
 };
 
 async function CreateReceiptTaxInvoice() {
