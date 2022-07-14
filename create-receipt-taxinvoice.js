@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const URl = 'https://api.leceipt.com';
 const endpoint = '/etax/documents/receipts-taxinvoices?api-version=2022-07-12';
-const API_Key = '50bb288614a448ca846edfd11eb7daff';
+const API_Key = 'YOUR-API-KEY';
 
 // unstructure เป็น true
 
