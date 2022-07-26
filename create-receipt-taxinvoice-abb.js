@@ -46,14 +46,20 @@ let data = {
 };
 
 async function CreateReceiptTaxInvoiceAbb() {
-  const response = await axios.post(URl + endpoint, data, {
-    headers: {
-      'API-Key': API_Key,
-      'Content-Type': 'application/json',
-    },
-  });
+  try {
+    const response = await axios.post(URl + endpoint, data, {
+      headers: {
+        'API-Key': API_Key,
+        'Content-Type': 'application/json',
+      },
+    });
 
-  return response.data;
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.log(error.response.data);
+    return error.response.data;
+  }
 }
 
-console.log(CreateReceiptTaxInvoiceAbb());
+CreateReceiptTaxInvoiceAbb();

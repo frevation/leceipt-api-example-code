@@ -68,6 +68,7 @@ let refer = {
 let data = {
   number: 'TIV20210300001',
   dateBE: '23/03/2564',
+  dueDateBE: '23/04/2564',
   includeVat: false,
   items: items, // items จากข้อมูลก่อนหน้า
   discount: 0,
@@ -77,17 +78,24 @@ let data = {
   receivedBy: 'สมชาย',
   reIssue: true,
   refer: refer, // refer จากข้อมูลก่อนหน้า
+  reference: '',
 };
 
 async function CreateInvoiceTaxinvoice() {
-  const response = await axios.post(URl + endpoint, data, {
-    headers: {
-      'API-Key': API_Key,
-      'Content-Type': 'application/json',
-    },
-  });
+  try {
+    const response = await axios.post(URl + endpoint, data, {
+      headers: {
+        'API-Key': API_Key,
+        'Content-Type': 'application/json',
+      },
+    });
 
-  return response.data;
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.log(error.response.data);
+    return error.response.data;
+  }
 }
 
-console.log(CreateInvoiceTaxinvoice());
+CreateInvoiceTaxinvoice();

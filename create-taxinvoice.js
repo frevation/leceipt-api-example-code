@@ -77,6 +77,7 @@ let data = {
   receivedBy: 'สมชาย',
   reIssue: true,
   refer: refer, // refer จากข้อมูลก่อนหน้า
+  reference: '',
 };
 
 async function CreateTaxinvoice() {
