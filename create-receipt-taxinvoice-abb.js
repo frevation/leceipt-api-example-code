@@ -1,40 +1,8 @@
 import axios from 'axios';
 
 const URl = 'https://api.leceipt.com';
-const endpoint = '/etax/documents/receipts-taxinvoices?api-version=2022-07-12';
+const endpoint = '/etax/documents/receipts-taxinvoices-abb';
 const API_Key = 'YOUR-API-KEY';
-
-// unstructure เป็น true
-let customer = {
-  name: 'บริษัท ลูกค้าทดสอบ จำกัด',
-  addressLineOne: '999 หมู่ 999 ถ.สาทร 99',
-  addressLineTwo: 'แขวงสีลม เขตบางรัก กรุงเทพมหานคร',
-  postcode: '10500',
-  branchNumber: '00000',
-  taxNumberType: 'TXID',
-  taxId: '1234567890123',
-  phone: '0812345678',
-  email: 'test@test.com',
-  unstructure: true,
-};
-
-// unstructure เป็น false
-// let customer = {
-//   name: 'บริษัท ลูกค้าทดสอบ จำกัด',
-//   buildingNumber: '99',
-//   address: 'หมู่ที่ 99',
-//   streetName: 'สาทร 99',
-//   branchNumber: '00000',
-//   subDistrictCode: '100402',
-//   districtCode: '1004',
-//   provinceCode: '10',
-//   postcode: '10500',
-//   taxNumberType: 'TXID',
-//   taxId: '1234567890123',
-//   phone: '0812345678',
-//   email: 'test@test.com',
-//   unstructure: false,
-// };
 
 let items = [
   {
@@ -71,15 +39,13 @@ let data = {
   items: items, // items จากข้อมูลก่อนหน้า
   discount: 0,
   language: 'th',
-  customer: customer, // customer จากข้อมูลก่อนหน้า
   note: 'ทดสอบหมายเหตุ',
   receivedBy: 'สมชาย',
   reIssue: true,
   refer: refer, // refer จากข้อมูลก่อนหน้า
-  reference: '',
 };
 
-async function CreateReceiptTaxInvoice() {
+async function CreateReceiptTaxInvoiceAbb() {
   try {
     const response = await axios.post(URl + endpoint, data, {
       headers: {
@@ -96,4 +62,4 @@ async function CreateReceiptTaxInvoice() {
   }
 }
 
-CreateReceiptTaxInvoice();
+CreateReceiptTaxInvoiceAbb();

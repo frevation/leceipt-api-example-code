@@ -7,14 +7,20 @@ const API_Key = 'YOUR-API-KEY';
 const id = 'document id from create document response api';
 
 async function Check() {
-  const response = await axios.get(URl + endpoint + id, {
-    headers: {
-      'API-Key': API_Key,
-      'Content-Type': 'application/json',
-    },
-  });
+  try {
+    const response = await axios.get(URl + endpoint + id, {
+      headers: {
+        'API-Key': API_Key,
+        'Content-Type': 'application/json',
+      },
+    });
 
-  return response.data;
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.log(error.response);
+    return error.response;
+  }
 }
 
-console.log(Check());
+Check();
