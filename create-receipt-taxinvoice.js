@@ -9,6 +9,7 @@ let customer = {
   name: 'บริษัท ลูกค้าทดสอบ จำกัด',
   addressLineOne: '999 หมู่ 999 ถ.สาทร 99',
   addressLineTwo: 'แขวงสีลม เขตบางรัก กรุงเทพมหานคร',
+  countryName: 'ไทย',
   postcode: '10500',
   branchNumber: '00000',
   taxNumberType: 'TXID',
