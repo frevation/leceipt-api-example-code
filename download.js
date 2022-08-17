@@ -10,7 +10,7 @@ const fileId = 'file id from check.js response jobs api';
 async function Download() {
   try {
     const response = await axios.get(
-      URl + endpoint + fileId + '/?api-version=2021-04-22',
+      URl + endpoint + fileId + '/?api-version=2022-07-12',
       {
         headers: {
           'API-Key': API_Key,
