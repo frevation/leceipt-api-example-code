@@ -9,6 +9,7 @@ const API_Key = 'YOUR-API-KEY';
 //   name: 'บริษัท ลูกค้าทดสอบ จำกัด',
 //   addressLineOne: '999 หมู่ 999 ถ.สาทร 99',
 //   addressLineTwo: 'แขวงสีลม เขตบางรัก กรุงเทพมหานคร',
+//   countryName: 'ไทย',
 //   postcode: '10500',
 //   branchNumber: '00000',
 //   taxNumberType: 'TXID',
@@ -75,7 +76,7 @@ let data = {
   language: 'th',
   customer: customer, // customer จากข้อมูลก่อนหน้า
   note: 'ทดสอบหมายเหตุ',
-  receivedBy: 'สมชาย',
+  createdBy: 'สมชาย',
   refer: refer, // refer จากข้อมูลก่อนหน้า
 };
 
