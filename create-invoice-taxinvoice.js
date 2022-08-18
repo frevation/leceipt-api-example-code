@@ -75,7 +75,7 @@ let data = {
   language: 'th',
   customer: customer, // customer จากข้อมูลก่อนหน้า
   note: 'ทดสอบหมายเหตุ',
-  receivedBy: 'สมชาย',
+  createdBy: 'สมชาย',
   reIssue: true,
   refer: refer, // refer จากข้อมูลก่อนหน้า
   reference: '',
